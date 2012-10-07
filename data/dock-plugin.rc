@@ -1,0 +1,2 @@
+expand_begin=true
+launchers=/usr/share/applications/xfce-settings-manager.desktop,/usr/share/applications/google-chrome.desktop,/usr/share/applications/evolution.desktop,/usr/share/applications/geany.desktop,/usr/share/applications/xchat-gnome.desktop,/usr/share/applications/exo-terminal-emulator.desktop,/usr/share/applications/totem.desktop,/usr/share/applications/banshee.desktop,/usr/share/applications/shotwell.desktop

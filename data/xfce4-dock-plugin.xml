@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-dock-plugin" version="1.0">
+  <property name="current" type="string" value="lucido"/>
+  <property name="lucido" type="empty">
+    <property name="border" type="uint" value="0"/>
+    <property name="top_margin" type="uint" value="2"/>
+    <property name="bottom_margin" type="uint" value="3"/>
+    <property name="line_width" type="double" value="1.300000"/>
+    <property name="indicator_size" type="uint" value="24"/>
+    <property name="bg_highlight" type="string" value="#bc6045ad"/>
+    <property name="bg_step_1" type="string" value="#0000002d"/>
+    <property name="bg_step_2" type="string" value="#0000005d"/>
+    <property name="selected" type="string" value="#FFFFFFff"/>
+    <property name="highlight" type="string" value="#80808040"/>
+  </property>
+</channel>

@@ -1,0 +1,8 @@
+[Xfce Panel]
+Type=X-XFCE-PanelPlugin
+Encoding=UTF-8
+_Name=Dock
+_Comment=Dock task plugin for xfce
+Icon=xfce4-dock-task-plugin
+X-XFCE-Module=dock-task-plugin
+X-XFCE-Internal=TRUE
