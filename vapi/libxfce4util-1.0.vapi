@@ -41,7 +41,7 @@ namespace Xfce {
         public unowned string read_entry (string key, string fallback);
         public unowned string read_entry_untranslated (string key, string fallback);
         public int read_int_entry (string key, int fallback);
-        [CCode (array_null_terminated = true)]
+        [CCode (array_length = false, array_null_terminated = true)]
         public string[]? read_list_entry (string key, string delimiter);
         public void rollback ();
         public void set_group (string group);

@@ -77,12 +77,6 @@ public class Xdp.LucidoEngine : Engine
     public override void
     paint_background (CairoContext inCtx)
     {
-        //double x, y;
-        //inCtx.get_target ().get_device_offset (out x, out y);
-
-        //inCtx.translate (-x, -y);
-        inCtx.move_to (0, 0);
-
         // Create wave path
         Cairo.Path wave = create_wave_path (inCtx);
         inCtx.new_path ();
@@ -128,12 +122,6 @@ public class Xdp.LucidoEngine : Engine
     public override void
     paint_foreground (CairoContext inCtx)
     {
-        //double x, y;
-        //inCtx.get_target ().get_device_offset (out x, out y);
-
-        //inCtx.translate (-x, -y);
-        inCtx.move_to (0, 0);
-
         // Create wave path
         Cairo.Path wave = create_wave_path (inCtx);
         inCtx.new_path ();

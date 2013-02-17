@@ -55,23 +55,15 @@ public class Xdp.DockTaskPlugin : DockPlugin
     private void
     load_config ()
     {
-        unowned string? file = "/home/gandalfn/.config/xfce4/panel/dock-plugin.rc";
-        if (file != null)
+        Xfconf.Channel channel = new Xfconf.Channel.with_property_base (Xfce.panel_get_channel_name (), get_property_base ());
+        view.expand_begin = channel.get_bool ("/expand_begin", false);
+        view.expand_end = channel.get_bool ("/expand_end", true);
+        view.bottom_padding = channel.get_int ("/bottom_padding", 3);
+        view.item_spacing = channel.get_int ("/item_spacing", 2);
+        string[] launchers = channel.get_string_list ("/launchers");
+        foreach (string filename in launchers)
         {
-            Xfce.Rc rc = new Xfce.Rc (file, false);
-
-            view.expand_begin = rc.read_bool_entry ("expand_begin", false);
-            view.expand_end = rc.read_bool_entry ("expand_end", true);
-            view.bottom_padding = rc.read_int_entry ("bottom_padding", 3);
-            view.item_spacing = rc.read_int_entry ("item_spacing", 2);
-            string[]? launchers = rc.read_list_entry ("launchers", ",");
-            if (launchers != null)
-            {
-                foreach (unowned string filename in launchers)
-                {
-                    (view.model as Xdp.DockTaskModel).add_launcher (filename);
-                }
-            }
+            (view.model as Xdp.DockTaskModel).add_launcher (filename);
         }
     }
 }
